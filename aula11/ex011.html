@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nacionalidades</title>
+  </head>
+  <body>
+    <h1>NACIONALIDADES</h1>
+    País que nasceu: <input type="text" name="txtnac" id="txtnac" />
+    <input type="button" value="Verificar" onclick="calcular()" />
+    <div id="res"></div>
+
+    <script>
+      function calcular() {
+        var txtnac = document.getElementById("txtnac");
+        var res = document.getElementById("res");
+        var nac = txtnac.value
+        res.innerHTML = `<p>País: ${nac}</p>`
+        if(nac == "Brasil"){
+            res.innerHTML += `<p>Você é <strong>BRASILEIRO(A)</strong></p>`
+        }
+        else{
+            res.innerHTML += `<p>Você é <strong>ESTRANGEIRO(A)</strong></p>`
+        }
+      }
+    </script>
+  </body>
+</html>
